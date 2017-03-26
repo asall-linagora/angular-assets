@@ -1,0 +1,81 @@
+<h3>Update an asset</h3>
+<div layout="column" ng-cloak class="md-inline-form">
+
+  <md-content layout-gt-sm="row" layout-padding>
+
+  </md-content>
+
+  <md-content layout-padding>
+    <div>
+      <form name="updateForm" ng-submit="update.updateAsset()">
+
+        <div layout-gt-xs="row">
+          <md-input-container class="md-block" flex-gt-xs>
+            <label for="title">Title</label>
+            <input id="title" ng-model="update.asset.title">
+          </md-input-container>
+        </div>
+
+        <div layout-gt-xs="row">
+          <md-input-container class="md-block" flex-gt-xs>
+            <label for="imageurl">ImageUrl</label>
+            <input id="imageurl" ng-model="update.asset.imageUrl">
+          </md-input-container>
+        </div>
+
+        <div layout-gt-sm="row">
+          <md-input-container class="md-block" flex-gt-sm>
+            <label for="createTime">Creation Date</label>
+            <input id="createTime" ng-model="update.asset.createTime"  disabled>
+          </md-input-container>
+
+          <md-input-container class="md-block" flex-gt-sm>
+            <label for="broadcasttime">Broadcast Time</label>
+            <input id="broadcasttime" ng-model="update.asset.liveBroadcastTime">
+          </md-input-container>
+
+          <md-input-container class="md-block" flex-gt-sm>
+            <label for="pubdate">Update Date</label>
+            <input id="pubdate" ng-model="update.asset.updateTime" disabled>
+          </md-input-container>
+
+          <md-input-container class="md-block" flex-gt-sm>
+            <label for="expiredate">Expiration Date</label>
+            <input id="expiredate" ng-model="update.asset.expireDate" disabled>
+          </md-input-container>
+        </div>
+
+        <div layout-gt-sm="row">
+          <md-input-container class="md-block" flex-gt-sm>
+            <label>Auto publish</label>
+            <md-switch ng-model="update.asset.autopublish" aria-label="Auto publish"></md-switch>
+          </md-input-container>
+
+          <md-input-container class="md-block" flex-gt-sm>
+            <label>Auto encode</label>
+            <md-switch ng-model="update.asset.autoencode" aria-label="Auto encode"></md-switch>
+          </md-input-container>
+
+          <md-input-container class="md-block" flex-gt-sm>
+            <label>Labeled as free</label>
+            <md-switch ng-model="update.asset.labeledAsFree" aria-label="Labeled as free"></md-switch>
+          </md-input-container>
+        </div>
+
+        <md-input-container class="md-block">
+          <label for="description">Description</label>
+          <textarea id="description" ng-model="update.asset.description"
+                    md-maxlength="150"
+                    rows="5"
+                    md-select-on-focus>
+
+          </textarea>
+        </md-input-container>
+
+        <md-button class="md-raised md-primary" type="submit">Update</md-button>
+
+      </form>
+    </div>
+  </md-content>
+
+</div>
