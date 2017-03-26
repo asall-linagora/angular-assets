@@ -9,5 +9,5 @@
  */
 angular.module('angularVimondAssetsApp')
   .controller('MainController', function () {
-
+    //global scope accessible from everywhere in the application
   });
