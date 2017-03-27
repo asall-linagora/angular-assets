@@ -4,6 +4,9 @@
 (function () {
   'use strict';
 
+  /**
+   * directive for the header
+   */
   angular.module('angularVimondAssetsApp')
     .directive('vmdHeader', function () {
       return {

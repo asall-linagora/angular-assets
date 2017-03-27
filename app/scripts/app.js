@@ -21,7 +21,12 @@
       'ngSanitize',
       'ngTouch',
       'ui.router',
-      'ngMaterial'
+      'ngMaterial',
+      'com.2fdevs.videogular',
+      'com.2fdevs.videogular.plugins.controls',
+      'com.2fdevs.videogular.plugins.overlayplay',
+      'com.2fdevs.videogular.plugins.poster',
+      'com.2fdevs.videogular.plugins.dash'
     ])
     .config(function ($stateProvider, $urlRouterProvider) {
       $urlRouterProvider.otherwise('/');
@@ -60,7 +65,23 @@
               return restService.getAsset($stateParams.id);
             }
           }
-        });
+        })
+
+        .state('listassets.play', {
+          url:'/:id/play',
+          templateUrl: 'views/player.html',
+          controller: 'PlayerController',
+          controllerAs: 'player',
+          param: {
+            id: null
+          },
+          resolve: {
+            assetplay: function (restService, $stateParams) {
+              return restService.playVideo($stateParams.id, 'dash');
+            }
+          }
+        })
+      ;
 
     });
 })();

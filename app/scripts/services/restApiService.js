@@ -23,7 +23,7 @@
         playVideo: function (id, protocol) {
           var endpoint = '/asset/' + id + '/play?protocol=' + protocol;
           var fullUrl = vimondConfig.baseUrl + endpoint;
-          $http.get(fullUrl );
+          return $http.get(fullUrl );
         },
         updateAsset: function (formData) {
           return this.getAsset(formData['@id']);

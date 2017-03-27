@@ -21,6 +21,7 @@ module.exports = function(config) {
     files: [
       // bower:js
       'bower_components/jquery/dist/jquery.js',
+      'bower_components/dash.all.min/index.js',
       'bower_components/angular/angular.js',
       'bower_components/bootstrap/dist/js/bootstrap.js',
       'bower_components/angular-animate/angular-animate.js',
@@ -33,6 +34,11 @@ module.exports = function(config) {
       'bower_components/angular-aria/angular-aria.js',
       'bower_components/angular-messages/angular-messages.js',
       'bower_components/angular-material/angular-material.js',
+      'bower_components/videogular/videogular.js',
+      'bower_components/videogular-dash/vg-dash.js',
+      'bower_components/videogular-overlay-play/vg-overlay-play.js',
+      'bower_components/videogular-poster/vg-poster.js',
+      'bower_components/videogular-controls/vg-controls.js',
       'bower_components/angular-mocks/angular-mocks.js',
       // endbower
       'app/scripts/**/*.js',

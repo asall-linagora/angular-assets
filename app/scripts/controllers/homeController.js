@@ -11,7 +11,7 @@
   angular.module('angularVimondAssetsApp')
     .controller('HomeController', function ($state, $timeout) {
 
-
+      //to redirect to assets list page
       $timeout(function() {
         $state.go('listassets');
       }, 5000);
